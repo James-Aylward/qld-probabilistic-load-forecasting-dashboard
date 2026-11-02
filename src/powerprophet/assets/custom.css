@@ -1,0 +1,125 @@
+/* src/powerprophet/assets/custom.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --pp-radius: 14px;
+  --pp-accent: #3b82f6;
+  --pp-shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.06);
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: var(--pp-shadow);
+  padding-top: .65rem;
+  padding-bottom: .65rem;
+}
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 1.25rem;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: var(--pp-radius);
+  box-shadow: var(--pp-shadow);
+}
+.card-body {
+  padding: 1.25rem 1.4rem;
+}
+
+/* Section labels in the sidebar */
+.pp-label {
+  font-weight: 600;
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--bs-secondary-color);
+  margin-bottom: .35rem;
+}
+
+/* Sidebar summary box */
+#selected-substation-summary {
+  background: var(--bs-tertiary-bg);
+  border-radius: 10px;
+  padding: .75rem;
+  min-height: 60px;
+  font-size: .85rem;
+}
+#selected-substation-summary:empty::before {
+  content: "Click a marker on the map to see details.";
+  color: var(--bs-secondary-color);
+  font-style: italic;
+}
+
+/* Map card */
+#substation-map {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Tabs */
+.nav-tabs {
+  border-bottom: 1px solid var(--bs-border-color);
+  gap: .25rem;
+}
+.nav-tabs .nav-link {
+  border: none;
+  border-radius: 8px 8px 0 0;
+  font-weight: 500;
+  color: var(--bs-secondary-color);
+  padding: .55rem 1rem;
+}
+.nav-tabs .nav-link.active {
+  background: var(--bs-tertiary-bg);
+  color: var(--bs-body-color);
+  font-weight: 600;
+}
+
+/* Theme switch icons */
+.fa-moon, .fa-sun {
+  font-size: .95rem;
+  opacity: .85;
+  vertical-align: middle;
+}
+
+
+[data-bs-theme="dark"] .dash-slider-mark {
+  color: #adb5bd !important;
+}
+[data-bs-theme="dark"] .dash-slider-track {
+  background-color: var(--pp-accent);
+}
+[data-bs-theme="dark"] .dash-slider-rail {
+  background-color: #495057;
+}
+:root {
+  --pp-radius: 14px;
+  --pp-accent: #3b82f6;
+  --pp-shadow: 0 2px 4px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.10);
+  --pp-border: transparent;
+}
+
+[data-bs-theme="dark"] {
+  --pp-shadow: 0 2px 4px rgba(0,0,0,.2), 0 8px 24px rgba(0,0,0,.35);
+  --pp-border: rgba(255,255,255,.08);
+}
+
+.card {
+  border: 1px solid var(--pp-border);
+  border-radius: var(--pp-radius);
+  box-shadow: var(--pp-shadow);
+}
+[data-bs-theme="dark"] body {
+  background-color: #17191c;
+}
+[data-bs-theme="dark"] .card {
+  background-color: #202327;
+}
